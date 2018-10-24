@@ -1,0 +1,174 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  background: gainsboro;
+}
+
+#header {
+  z-index: 9999;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  background: white;
+  border-bottom: 1px;
+  border-bottom-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+#sidebar {
+  z-index: 1;
+  height: 100%;
+  width: 200px;
+  position: fixed!important;
+  overflow: auto;
+  padding-top: 50px;
+  background: green;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+
+#commandBar {
+  z-index: 9999;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  background: white;
+}
+
+.button {
+  font-size: 24px!important;
+  background: inherit;
+  height: inherit;
+  width: 50px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap
+}
+
+.button:hover {
+  background: gray!important;
+}
+
+.logo {
+  background: black;
+  height: inherit;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wpa-buttons-extended {
+  height: inherit;
+}
+
+.wpa-sidebar {
+  width: 100%;
+  text-align: left;
+  border: none;
+  white-space: normal;
+  float: none;
+  outline: 0;
+  height: 100%;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.cms-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  border-radius: 25px;
+  margin: 0.5%;
+  background: rgb(151, 206, 75);
+}
+
+.cms-article {
+  color: azure;
+  max-width: 350px;
+  padding: 0.01em 16px;
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  margin: 2%;
+}
+
+/*large screen*/
+
+@media (min-width:993px) {
+  .wpa-hamburguer {
+    display: none!important;
+  }
+  .wpa-sidebar {
+    display: block!important;
+  }
+  .wpa-main {
+    padding-bottom: 0%;
+    margin-left: 200px;
+  }
+  .wpa-commandbar {
+    display: none;
+  }
+}
+
+/*little screen*/
+
+@media (max-width:992px) {
+  .wpa-buttons-extended {
+    display: none;
+  }
+  .wpa-sidebar {
+    display: none;
+  }
+  .wpa-main {
+    padding-bottom: 50px;
+  }
+  .wpa-main {
+    margin-left: 0!important;
+    margin-right: 0!important
+  }
+  .wpa-commandbar {
+    display: flex;
+  }
+}
+
+.effect-fadein {
+  position: relative;
+  animation: fadein 0.4s
+}
+
+@keyframes fadein {
+  from {
+    left: -300px;
+    opacity: 0
+  }
+  to {
+    left: 0;
+    opacity: 1
+  }
+}
